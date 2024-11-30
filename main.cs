@@ -32,11 +32,10 @@ namespace MyApplication
             // Game Intro and setup -- enter name a generate a random number 
             Console.WriteLine("Enter your name: ");
             string userName = Console.ReadLine();
-            Console.WriteLine("Hello, " + userName);
-            Console.WriteLine("Welcome to Hangman!  I'll pick a random word from the dictionary and you'll have 10 chances to guess my word.  Ready begin!");
+            Console.WriteLine("Welcome to Hangman, " + userName + "! I'll pick a random word from the dictionary and you'll have 10 chances to guess my word.  Ready begin!");
 
             // adding a for loop
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 3; i++)
             {
             
             
@@ -47,6 +46,13 @@ namespace MyApplication
 
             string[] letters = {"mushroom", "guacamole", "computer", "linguine", "television", "calendar", "exaggerate", "football"};
             Console.WriteLine(letters[rand1]);
+            Console.WriteLine(letters[rand1].Length);
+            init stringLength = letters[rand1].Length
+            
+            for i = 1 to stringLength
+            {
+                
+            }
 
             
             string answer = (letters[rand1]);
