@@ -45,7 +45,7 @@ namespace MyApplication
             Console.WriteLine("  _|__________|");
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("Welcome to Hangman!  I'll pick a random word from the dictionary and you'll have 10 chances to guess my word.  Ready,  begin!");
+            Console.WriteLine("Welcome to Hangman!  I'll pick a random word from the dictionary and you'll have 7 chances to guess my word.  Ready, begin!");
             Console.WriteLine();
 
             // adding a random number and assigning an array
@@ -55,32 +55,45 @@ namespace MyApplication
 
             string[] hangmanWord = {"mushroom", "guacamole", "computer", "linguine", "television", "calendar", "exaggerate", "football", "awkward", "blizzard", "buzzard", "bandwagon", "bookworm", "buffalo", "cycle", "beekeeper", "duplex", "fishhook", "fishing", "bulldozer", "backhoe", "bicycle", "jazz", "puzzle", "babe", "cozy", "walking"};
             Console.WriteLine("My word is " + hangmanWord[rand1] + ".");
-            Console.WriteLine("It has " + hangmanWord[rand1].Length + " letters.");
+            int wordLength = hangmanWord[rand1].Length;
+            Console.WriteLine("It has " + wordLength + " letters.");
+            
+            // Drawing the Hangman Word with blank lines 
+            Console.Write("Word: ");
+            for (int i = 0; i < hangmanWord[rand1].Length; i++)
+            { 
+                Console.Write("_ ");
+            } 
+            Console.WriteLine();
 
 
-            // adding a for loop
-            for (int i = 0; i < 3; i++)
+            // Allow the user to guess a letter in the hangman word
+            for (int j = 0; j < 7; j++)
             {
-            
-            
-            
-            //init stringLength = letters[rand1].Length
-            
-            //for i = 1 to stringLength
-         
-            
-            string answer = (hangmanWord[rand1]);
-            string userGuess = "";
-            int guesses = 0;
+                string answer = (hangmanWord[rand1]);
+                string userGuess = "";
+                int guesses = 0;
 
             // prompt the user for an initial guess 
-            Console.WriteLine("Please type letter " + answer + ":");
+            Console.WriteLine("Please guess a letter: ");
            
             // begin the game loop
             while (userGuess != answer)
             {
                 userGuess = Console.ReadLine();
                 guesses++;
+                
+                
+                // see if the userGuess is a letter in the hangman word
+                
+                if (answer.IndexOf(userGuess))
+                {
+                    Console.WriteLine(userGuess);
+                }
+                    
+                    
+    
+                
                 
                 if (userGuess != answer)
                 {
