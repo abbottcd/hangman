@@ -33,30 +33,43 @@ namespace MyApplication
             Console.WriteLine("==============");
             Console.WriteLine("   HANGMAN!   ");
             Console.WriteLine("==============");
-            Console.WriteLine("Welcome to Hangman!  I'll pick a random word from the dictionary and you'll have 10 chances to guess my word.  Ready begin!");
+            Console.WriteLine();    
+            Console.WriteLine("  _________");
+            Console.WriteLine("   |      |");
+            Console.WriteLine("   |      O");
+            Console.WriteLine("   |    __|__");
+            Console.WriteLine("   |      |");
+            Console.WriteLine("   |     / \\");
+            Console.WriteLine("  _|_______");
+            Console.WriteLine("   |      |____");
+            Console.WriteLine("  _|__________|");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Welcome to Hangman!  I'll pick a random word from the dictionary and you'll have 10 chances to guess my word.  Ready,  begin!");
+            Console.WriteLine();
+
+            // adding a random number and assigning an array
+            Random rnd = new Random();
+            int rand1 = rnd.Next(27);
+
+
+            string[] hangmanWord = {"mushroom", "guacamole", "computer", "linguine", "television", "calendar", "exaggerate", "football", "awkward", "blizzard", "buzzard", "bandwagon", "bookworm", "buffalo", "cycle", "beekeeper", "duplex", "fishhook", "fishing", "bulldozer", "backhoe", "bicycle", "jazz", "puzzle", "babe", "cozy", "walking"};
+            Console.WriteLine("My word is " + hangmanWord[rand1] + ".");
+            Console.WriteLine("It has " + hangmanWord[rand1].Length + " letters.");
+
 
             // adding a for loop
             for (int i = 0; i < 3; i++)
             {
             
             
-            // adding a random number and assigning an array
-            Random rnd = new Random();
-            int rand1 = rnd.Next(27);
-
-
-            string[] letters = {"mushroom", "guacamole", "computer", "linguine", "television", "calendar", "exaggerate", "football", "awkward", "blizzard", "buzzard", "bandwagon", "bookworm", "buffalo", "cycle", "beekeeper", "duplex", "fishhook", "fishing", "bulldozer", "backhoe", "bicycle", "jazz", "puzzle", "babe", "cozy", "walking"};
-            Console.WriteLine("My word is " + letters[rand1] + ".");
-            Console.WriteLine("It has " + letters[rand1].Length + " letters.");
+            
             //init stringLength = letters[rand1].Length
             
             //for i = 1 to stringLength
-            {
-                
-            }
-
+         
             
-            string answer = (letters[rand1]);
+            string answer = (hangmanWord[rand1]);
             string userGuess = "";
             int guesses = 0;
 
