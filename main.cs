@@ -30,9 +30,10 @@ namespace MyApplication
 
         {
             // Game Intro and setup -- enter name a generate a random number 
-            Console.WriteLine("Enter your name: ");
-            string userName = Console.ReadLine();
-            Console.WriteLine("Welcome to Hangman, " + userName + "! I'll pick a random word from the dictionary and you'll have 10 chances to guess my word.  Ready begin!");
+            Console.WriteLine("==============");
+            Console.WriteLine("   HANGMAN!   ");
+            Console.WriteLine("==============");
+            Console.WriteLine("Welcome to Hangman!  I'll pick a random word from the dictionary and you'll have 10 chances to guess my word.  Ready begin!");
 
             // adding a for loop
             for (int i = 0; i < 3; i++)
@@ -41,15 +42,15 @@ namespace MyApplication
             
             // adding a random number and assigning an array
             Random rnd = new Random();
-            int rand1 = rnd.Next(8);
+            int rand1 = rnd.Next(27);
 
 
-            string[] letters = {"mushroom", "guacamole", "computer", "linguine", "television", "calendar", "exaggerate", "football"};
-            Console.WriteLine(letters[rand1]);
-            Console.WriteLine(letters[rand1].Length);
-            init stringLength = letters[rand1].Length
+            string[] letters = {"mushroom", "guacamole", "computer", "linguine", "television", "calendar", "exaggerate", "football", "awkward", "blizzard", "buzzard", "bandwagon", "bookworm", "buffalo", "cycle", "beekeeper", "duplex", "fishhook", "fishing", "bulldozer", "backhoe", "bicycle", "jazz", "puzzle", "babe", "cozy", "walking"};
+            Console.WriteLine("My word is " + letters[rand1] + ".");
+            Console.WriteLine("It has " + letters[rand1].Length + " letters.");
+            //init stringLength = letters[rand1].Length
             
-            for i = 1 to stringLength
+            //for i = 1 to stringLength
             {
                 
             }
@@ -60,7 +61,7 @@ namespace MyApplication
             int guesses = 0;
 
             // prompt the user for an initial guess 
-            Console.WriteLine(userName + ", please type letter " + answer + ":");
+            Console.WriteLine("Please type letter " + answer + ":");
            
             // begin the game loop
             while (userGuess != answer)
